@@ -10,9 +10,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * <p>service层的返回结果对象
- *
- * Created by Ben on 16/8/29.
+ * service层的返回结果对象
+ * Created by xiaoxu on 2018/3/4.
  */
 public class Result<T> {
 

@@ -12,9 +12,6 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Map;
 
-/**
- * Created by Ben on 16/9/9.
- */
 public class UserControllerTest extends BaseWebTest{
 
     private final static Logger log = LoggerFactory.getLogger(UserControllerTest.class);

@@ -2,7 +2,7 @@ package com.hades.farm.web.model;
 
 /**
  * 返回给客户端的对象模型
- * Created by Ben on 16/9/5.
+ * Created by xiaoxu on 2018/3/4.
  */
 public class ViewResult<T> {
     /**

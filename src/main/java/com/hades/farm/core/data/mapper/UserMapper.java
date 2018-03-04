@@ -1,19 +1,20 @@
 package com.hades.farm.core.data.mapper;
 
-import com.hades.farm.core.data.domain.UserDo;
+
+import com.hades.farm.core.data.entity.User;
 
 /**
- * 用户DAO
- * Created by Ben on 16/8/30.
+ * Created by xiaoxu on 2018/3/4.
  */
 public interface UserMapper {
 
     /**
      * 根据ID获取用户
+     *
      * @param userId
      * @return
      */
-    UserDo getUserById(long userId);
+    User getUserById(long userId);
 
 
 }

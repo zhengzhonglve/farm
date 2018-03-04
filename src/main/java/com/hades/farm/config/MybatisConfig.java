@@ -19,9 +19,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-/**
- * Created by Ben on 16/8/30.
- */
 @Configuration
 @ConditionalOnClass(DataSourceConfig.class)
 @MapperScan(basePackages = {"com.langu.wanba.core.data.mapper"})

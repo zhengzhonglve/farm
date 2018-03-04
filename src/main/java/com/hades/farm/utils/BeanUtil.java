@@ -11,8 +11,6 @@ import java.util.List;
 
 /**
  * <p> bean工具类
- *
- * @author lian
  */
 public final class BeanUtil {
 

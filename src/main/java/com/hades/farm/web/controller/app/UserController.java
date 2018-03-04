@@ -1,6 +1,6 @@
 package com.hades.farm.web.controller.app;
 
-import com.hades.farm.core.common.user.User;
+import com.hades.farm.core.data.entity.User;
 import com.hades.farm.core.result.Result;
 import com.hades.farm.core.service.UserService;
 import com.hades.farm.web.model.ViewResult;
@@ -26,7 +26,7 @@ public class UserController {
 //    @Auth
     public ViewResult getUserById(@RequestParam long userId) {
         ViewResult<UserModel> result = new ViewResult<>();
-        Result<User> uRes = userService.getUserById(userId);
+        Result<User> uRes = userService.get(userId);
         if (!uRes.isSuccess()) {
             result.addError(uRes.getErrMsg());
             return result;

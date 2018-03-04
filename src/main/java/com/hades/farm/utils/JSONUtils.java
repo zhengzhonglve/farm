@@ -16,8 +16,6 @@ import java.util.List;
 /**
  * <p>JSON工具类，提供对象和字符串互相转换等功能
  * <p>
- * Author: allen
- * Date: 15-12-21
  */
 public final class JSONUtils {
 
