@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ConditionalOnClass(DataSourceConfig.class)
-@MapperScan(basePackages = {"com.langu.wanba.core.data.mapper"})
+@MapperScan(basePackages = {"com.hades.farm.core.data.mapper"})
 public class MybatisConfig implements EnvironmentAware{
 
     private final static Logger LOG = LoggerFactory.getLogger(MybatisConfig.class);

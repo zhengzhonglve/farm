@@ -1,9 +1,8 @@
 spring:
   datasource:
-#    url: jdbc:mysql://120.76.136.118:3306/wanba?useUnicode=true&autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    url: jdbc:mysql://127.0.0.1:3306/wanba?useUnicode=true&autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    url: jdbc:mysql://120.79.137.135:3306/farm?useUnicode=true&autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
-    password: langu002
+    password: XHroot2018!
     jmx-enabled: true
     test-while-idle: true
     test-on-borrow: true
@@ -21,16 +20,6 @@ spring:
     remove-abandoned: true
     driver-class-name: com.mysql.jdbc.Driver
 
-  redis:
-    host: 120.76.136.118
-    password: langu1234
-    port: 6379
-    pool:
-      max-wait: 5000
-      max-active: 500
-      max-idle: 8
-    timeout: 1000
-
   jackson:
     serialization-inclusion: non_null
 task:
@@ -40,7 +29,7 @@ task:
     capacity: 20
 
 mybatis:
-  typeAliasesPackage: com.langu.wanba.core.data.domain
+  typeAliasesPackage: com.hades.farm.core.data.entity
   configLocation: classpath:mybatis/mybatis.xml
   mapperLocations: classpath:mybatis/sql/*.xml
 
@@ -54,12 +43,6 @@ emchat:
 
 server:
   port: 8098
-
-pay:
-  host: http://120.76.136.118:8099
-  aliUrl: /api/pay/notify/alipay
-  aliVirtualUrl: /api/pay/virtual/notify/alipay
-  wepayUrl: /api/pay/notify/wepay
   
 switch:
   debug: true

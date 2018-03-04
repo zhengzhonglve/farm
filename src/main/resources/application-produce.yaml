@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://rdsj4q8eme71f45q4u80.mysql.rds.aliyuncs.com:3306/youyu_yungo?useUnicode=true&autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    username: youyudb1
-    password: youyuDb1
+    url: jdbc:mysql://120.79.137.135:3306/farm?useUnicode=true&autoReconnect=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: root
+    password: XHroot2018!
     jmx-enabled: true
     test-while-idle: true
     test-on-borrow: true
@@ -20,16 +20,6 @@ spring:
     remove-abandoned: true
     driver-class-name: com.mysql.jdbc.Driver
 
-  redis:
-    host: 33b23fcff49c449b.m.cnsza.kvstore.aliyuncs.com
-    port: 6379
-    password: 33b23fcff49c449b:Langu123
-    pool:
-      max-wait: 5000
-      max-active: 500
-      max-idle: 8
-    timeout: 1000
-
   jackson:
     serialization-inclusion: non_null
 task:
@@ -39,28 +29,21 @@ task:
     capacity: 20
 
 mybatis:
-  typeAliasesPackage: com.langu.wanba.core.data.domain
+  typeAliasesPackage: com.hades.farm.core.data.entity
   configLocation: classpath:mybatis/mybatis.xml
   mapperLocations: classpath:mybatis/sql/*.xml
 
 emchat:
-  host: https://a1.easemob.com
+  schema: https
+  host: a1.easemob.com
   password: 123456
-  appkey: pingke#yungo
-  clientId: YXA661K68JvxEea3I4VBp7YGwA
-  secret: YXA64w0Zvn8D91m2aof_0acXeGKMH3M
-
-pay:
-  host: http://api.yungo.fallchat.com
-  aliUrl: /api/pay/notify/alipay
-  aliVirtualUrl: /api/pay/virtual/notify/alipay
-  wepayUrl: /api/pay/notify/wepay
-  applePayVipUrl: https://buy.itunes.apple.com/verifyReceipt
-  applePayVipUrlSandbox: https://sandbox.itunes.apple.com/verifyReceipt
-  debug: false
+  appkey: pingke#yungo-test
+  clientId: YXA6Rc6j0Hz5EeanSeU_LEl1aQ
+  secret: YXA6NuO-NjzTOgXe444wxLbgAtZG6Vg
 
 server:
-  port: 8099
+  port: 8098
 
 switch:
-  debug: false
+  debug: true
+
