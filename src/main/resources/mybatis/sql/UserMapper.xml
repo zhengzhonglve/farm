@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.langu.wanba.core.data.mapper.UserMapper">
+
+    <resultMap id="user" type="UserDo">
+        <id property="userId" column="user_id"/>
+        <result property="part" column="part"/>
+        <result property="nick" column="nick"/>
+        <result property="face" column="face"/>
+        <result property="ccode" column="ccode"/>
+        <result property="phone" column="phone"/>
+        <result property="solt" column="solt"/>
+        <result property="passwd" column="passwd"/>
+        <result property="qq" column="qq"/>
+        <result property="wechat" column="wechat"/>
+        <result property="regMode" column="reg_mode"/>
+        <result property="chatId" column="chat_id"/>
+        <result property="chatPwd" column="chat_pwd"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="ip" column="ip"/>
+        <result property="state" column="state"/>
+        <result property="syncVersion" column="sync_version"/>
+        <result property="lastLogin" column="last_login"/>
+        <result property="createTime" column="create_time"/>
+        <result property="channel" column="channel"/>
+    </resultMap>
+
+    <sql id="user_columns">
+        user_id,nick,part,face,reg_mode,chat_id,chat_pwd,province,city,ip,state,last_login,create_time,sync_version
+    </sql>
+
+    <select id="getUserById" resultMap="user">
+        SELECT
+        <include refid="user_columns"></include>
+        FROM `user`
+        WHERE user_id=#{userId}
+    </select>
+
+</mapper>
